@@ -23,7 +23,6 @@ Make a histogram of the total number of steps taken each day
 sum_per_day<-aggregate(datac$steps, by=list(datac$date),sum)
 png("histo_step.png")
 hist(sum_per_day$x)
-knitr::include_graphics('./.jpg')
 dev.off()
 knitr::include_graphics('./histo_step.png')
 ```
