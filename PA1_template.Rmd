@@ -27,6 +27,10 @@ dev.off()
 ```
 ![optional caption text](./histo_step.png)
 
+mean number of steps taken each day = 10766.19
+
+median number of steps taken each day = 10765
+
 ## What is the average daily activity pattern?
 
 
