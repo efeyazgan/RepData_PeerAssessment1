@@ -24,7 +24,7 @@ sum_per_day<-aggregate(datac$steps, by=list(datac$date),sum)
 png("histo_step.png")
 hist(sum_per_day$x)
 dev.off()
-knitr::include_graphics('./histo_step.png')
+! [Alt text] (./histo_step.png)
 ```
 ## What is the average daily activity pattern?
 
