@@ -35,9 +35,10 @@ median number of steps taken each day = 10765
 library(ggplot2)
 mean_per_day<-aggregate(datac$steps, by=list(datac$date),mean)
 png("mean_per_day_ts.png")
-ggplot(mean_per_day, aes(Group.1, x)) + geom_line() + xlab("")+ ylab("")
+ggplot(mean_per_day, aes(Group.1, x)) + geom_line() + xlab("date")+ ylab("avg. # steps / day")
+dev.off()
 ```
-
+![optional caption text](./mean_per_day_ts.png)
 
 ## What is the average daily activity pattern?
 
