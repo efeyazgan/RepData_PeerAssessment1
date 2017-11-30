@@ -25,7 +25,7 @@ png("histo_step.png")
 hist(sum_per_day$x)
 dev.off()
 ```
-! [Alt text] (./histo_step.png)
+![optional caption text](./histo_step.png)
 
 ## What is the average daily activity pattern?
 
