@@ -7,7 +7,7 @@ output:
 
 
 ## Loading and preprocessing the data
-```{r}
+```{r echo=TRUE}
 library(lubridate)
 data<-read.csv("activity.csv",sep = ",",colClasses = NA,na.strings = "NA")
 datac<-na.omit(data)
@@ -19,13 +19,14 @@ datac$date<-datev
 
 
 Make a histogram of the total number of steps taken each day
-```{r}
+```{r echo=TRUE, out.width='100%'}
 sum_per_day<-aggregate(datac$steps, by=list(datac$date),sum)
 png("histo_step.png")
 hist(sum_per_day$x)
+knitr::include_graphics('./.jpg')
 dev.off()
+knitr::include_graphics('./histo_step.png')
 ```
-
 ## What is the average daily activity pattern?
 
 
