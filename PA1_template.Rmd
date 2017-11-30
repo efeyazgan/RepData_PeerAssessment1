@@ -20,8 +20,9 @@ datac$date<-datev
 
 Make a histogram of the total number of steps taken each day
 ```{r}
+sum_per_day<-aggregate(datac$steps, by=list(datac$date),sum)
 png("histo_step.png")
-hist(datac$steps)
+hist(sum_per_day$x)
 dev.off()
 ```
 
