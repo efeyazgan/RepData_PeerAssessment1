@@ -19,7 +19,7 @@ datac$date<-datev
 
 
 Make a histogram of the total number of steps taken each day
-```{r echo=TRUE, out.width='100%'}
+```{r echo=TRUE}
 sum_per_day<-aggregate(datac$steps, by=list(datac$date),sum)
 png("histo_step.png")
 hist(sum_per_day$x)
@@ -30,6 +30,14 @@ dev.off()
 mean number of steps taken each day = 10766.19
 
 median number of steps taken each day = 10765
+
+```{r echo=TRUE}
+library(ggplot2)
+mean_per_day<-aggregate(datac$steps, by=list(datac$date),mean)
+png("mean_per_day_ts.png")
+ggplot(mean_per_day, aes(Group.1, x)) + geom_line() + xlab("")+ ylab("")
+```
+
 
 ## What is the average daily activity pattern?
 
