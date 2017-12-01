@@ -42,7 +42,15 @@ dev.off()
 
 ## What is the average daily activity pattern?
 
-
+The 5-minute interval that, on average, contains the maximum number of steps:
+```{r echo=TRUE}
+mean_for_each_interval<-aggregate(datac$steps,by=list(datac$interval),mean)
+max(mean_for_each_interval$x)
+[1] 206.1698
+which.max(mean_for_each_interval$x)
+[1] 104 
+```
+104 is the interval where maximum number (which is 207.1698) of average steps are taken.
 
 ## Imputing missing values
 
