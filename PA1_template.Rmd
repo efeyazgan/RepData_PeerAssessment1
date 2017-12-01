@@ -52,6 +52,10 @@ which.max(mean_for_each_interval$x)
 ```
 104 is the interval where maximum number (which is 207.1698) of average steps are taken.
 
+This could also be visually seen in:
+![optional caption text](./activity_per_5min_interval.png)
+
+
 ## Imputing missing values
 
 
