@@ -44,15 +44,17 @@ dev.off()
 
 The 5-minute interval that, on average, contains the maximum number of steps:
 ```{r echo=TRUE}
+png("activity_per_5min_interval.png")
 mean_for_each_interval<-aggregate(datac$steps,by=list(datac$interval),mean)
+ggplot(mean_for_each_interval, aes(Group.1, x)) + geom_line() + xlab("interval")+ ylab("avg. # steps / interval")
 max(mean_for_each_interval$x)
-[1] 206.1698
 which.max(mean_for_each_interval$x)
-[1] 104 
+dev.off()
 ```
 104 is the interval where maximum number (which is 207.1698) of average steps are taken.
 
-This could also be visually seen in:
+This could also be seen in:
+
 ![optional caption text](./activity_per_5min_interval.png)
 
 
