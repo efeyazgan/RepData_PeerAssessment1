@@ -6,7 +6,7 @@ output:
 ---
 
 
-## Loading and preprocessing the data (including the code to describe and show a strategy for imputing missing data)
+## Loading and preprocessing the data 
 ```{r echo=TRUE}
 library(lubridate)
 data<-read.csv("activity.csv",sep = ",",colClasses = NA,na.strings = "NA")
@@ -59,6 +59,11 @@ This could also be seen in:
 
 
 ## Imputing missing values
+
+```{r echo=TRUE}
+nrow(data)-nrow(datac)
+```
+There are 2304 rows with missing data. 
 
 
 
